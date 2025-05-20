@@ -48,6 +48,7 @@ orbiton dev
 - Main documentation is available in each project's README.md
 - Architecture and design specifications can be found in the [docs](./docs) directory
 - For component syntax and semantics, refer to [orbit-spec.md](./orbit/orbit-spec.md)
+- Development roadmap and milestones are available in the [roadmap](./docs/roadmap) directory
 - View our development roadmap and milestones in the [roadmap](./docs/roadmap) directory
 
 ## Contributing

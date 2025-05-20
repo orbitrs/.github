@@ -49,7 +49,7 @@ orbiton dev
 - **[Documentation](https://github.com/orbitrs/orbit/docs)**: Comprehensive guides, API references, and tutorials
 - **[Examples](https://github.com/orbitrs/orbit/examples)**: Sample applications showcasing Orbit capabilities
 - **[Discussions](https://github.com/orbitrs/orbit/discussions)**: Community conversations and support
-- **[Roadmap](https://github.com/orbitrs/orbit#roadmap)**: Our development plan and milestone tracking
+- **[Roadmap](https://github.com/orbitrs/orbit/docs/roadmap)**: Detailed development plan and milestone tracking
 
 ---
 
