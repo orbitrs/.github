@@ -56,16 +56,12 @@ jobs:
         sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev
     
     - name: Build
-      uses: actions-rs/cargo@v1
-      with:
-        command: build
-        args: --verbose
+      working-directory: ${{ github.workspace }}
+      run: cargo build --verbose
     
     - name: Run tests
-      uses: actions-rs/cargo@v1
-      with:
-        command: test
-        args: --verbose
+      working-directory: ${{ github.workspace }}
+      run: cargo test --verbose
     
   lint:
     name: Lint
@@ -83,13 +79,9 @@ jobs:
         components: rustfmt, clippy
     
     - name: Check formatting
-      uses: actions-rs/cargo@v1
-      with:
-        command: fmt
-        args: --all -- --check
+      working-directory: ${{ github.workspace }}
+      run: cargo fmt --all -- --check
     
     - name: Run clippy
-      uses: actions-rs/cargo@v1
-      with:
-        command: clippy
-        args: -- -D warnings
+      working-directory: ${{ github.workspace }}
+      run: cargo clippy -- -D warnings

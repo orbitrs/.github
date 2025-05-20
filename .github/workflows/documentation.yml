@@ -45,6 +45,7 @@ jobs:
       - name: Build documentation
         env:
           RUSTDOCFLAGS: -D warnings
+        working-directory: ${{ github.workspace }}
         run: |
           cargo doc --no-deps --document-private-items --workspace
           

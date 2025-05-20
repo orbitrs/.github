@@ -36,6 +36,7 @@ jobs:
     
     - name: Generate changelog for release
       id: changelog
+      working-directory: ${{ github.workspace }}
       run: |
         PREV_TAG=$(git describe --tags --abbrev=0 ${{ steps.get_version.outputs.version }}^ 2>/dev/null || echo "")
         if [ -z "$PREV_TAG" ]; then
@@ -108,10 +109,8 @@ jobs:
         target: ${{ matrix.target }}
     
     - name: Build
-      uses: actions-rs/cargo@v1
-      with:
-        command: build
-        args: --release --bin orbiton --bin orbit-analyzer
+      working-directory: ${{ github.workspace }}
+      run: cargo build --release --bin orbiton --bin orbit-analyzer
     
     - name: Prepare artifacts (Unix)
       if: matrix.os != 'windows-latest'
@@ -161,29 +160,29 @@ jobs:
         override: true
     
     - name: Publish orbit
-      uses: actions-rs/cargo@v1
-      with:
-        command: publish
-        args: --token ${{ secrets.CRATES_IO_TOKEN }} --allow-dirty -p orbit
+      working-directory: ${{ github.workspace }}
+      env:
+        CARGO_REGISTRY_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
+      run: cargo publish --allow-dirty -p orbit
       continue-on-error: true
     
     - name: Publish orbit-analyzer
-      uses: actions-rs/cargo@v1
-      with:
-        command: publish
-        args: --token ${{ secrets.CRATES_IO_TOKEN }} --allow-dirty -p orbit-analyzer
+      working-directory: ${{ github.workspace }}
+      env:
+        CARGO_REGISTRY_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
+      run: cargo publish --allow-dirty -p orbit-analyzer
       continue-on-error: true
     
     - name: Publish orbitkit
-      uses: actions-rs/cargo@v1
-      with:
-        command: publish
-        args: --token ${{ secrets.CRATES_IO_TOKEN }} --allow-dirty -p orbitkit
+      working-directory: ${{ github.workspace }}
+      env:
+        CARGO_REGISTRY_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
+      run: cargo publish --allow-dirty -p orbitkit
       continue-on-error: true
     
     - name: Publish orbiton
-      uses: actions-rs/cargo@v1
-      with:
-        command: publish
-        args: --token ${{ secrets.CRATES_IO_TOKEN }} --allow-dirty -p orbiton
+      working-directory: ${{ github.workspace }}
+      env:
+        CARGO_REGISTRY_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
+      run: cargo publish --allow-dirty -p orbiton
       continue-on-error: true

@@ -41,6 +41,7 @@ jobs:
     
     - name: Update cache (Unix)
       if: runner.os != 'Windows'
+      working-directory: ${{ github.workspace }}
       run: |
         cargo fetch
         cargo build --workspace
@@ -48,7 +49,11 @@ jobs:
     
     - name: Update cache (Windows)
       if: runner.os == 'Windows'
+      working-directory: ${{ github.workspace }}
       run: |
+        cargo fetch
+        cargo build --workspace
+        cargo test --workspace --no-run
         cargo fetch
         cargo build --workspace
         cargo test --workspace --no-run
