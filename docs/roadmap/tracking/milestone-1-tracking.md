@@ -32,9 +32,9 @@
 
 | Task | Assignee | Status | Target | Notes |
 |------|----------|--------|--------|-------|
-| Design `.orbit` file format | @alex | 🟢 Complete | Q1 2025 | Format specification v0.1 completed |
-| Create compiler/parser | @sarah | 🟡 In Progress | Q2 2025 | Basic parsing working, need to handle more complex expressions |
-| Component lifecycle | @alex | 🔴 Not Started | Q2 2025 | Pending parser completion |
+| Design `.orbit` file format | @itsalfredakku | 🟢 Complete | Q1 2025 | Format specification v0.1 completed |
+| Create compiler/parser | @itsalfredakku | 🟡 In Progress | Q2 2025 | Basic parsing working, need to handle more complex expressions |
+| Component lifecycle | @itsalfredakku | 🔴 Not Started | Q2 2025 | Pending parser completion |
 | State management | Unassigned | 🔴 Not Started | Q2 2025 | |
 | Props and event handling | Unassigned | 🔴 Not Started | Q3 2025 | |
 
@@ -42,17 +42,17 @@
 
 | Task | Assignee | Status | Target | Notes |
 |------|----------|--------|--------|-------|
-| Skia-based 2D rendering | @miguel | 🟡 In Progress | Q2 2025 | Basic shapes and text rendering working |
-| WGPU-based 3D capabilities | @jamie | 🔴 Not Started | Q3 2025 | Research phase |
+| Skia-based 2D rendering | @itsalfredakku | 🟡 In Progress | Q2 2025 | Basic shapes and text rendering working |
+| WGPU-based 3D capabilities | @itsalfredakku | 🔴 Not Started | Q3 2025 | Research phase |
 | Unified rendering pipeline | Unassigned | 🔴 Not Started | Q3 2025 | |
-| Layout engine | @sarah | 🔴 Not Started | Q3 2025 | |
+| Layout engine | @itsalfredakku | 🔴 Not Started | Q3 2025 | |
 
 #### Platform Adapters
 
 | Task | Assignee | Status | Target | Notes |
 |------|----------|--------|--------|-------|
-| WebAssembly (WASM) target | @chen | 🟡 In Progress | Q2 2025 | Basic integration working |
-| Desktop adapters | @miguel | 🟡 In Progress | Q2 2025 | Windows and macOS prototypes functional |
+| WebAssembly (WASM) target | @itsalfredakku | 🟡 In Progress | Q2 2025 | Basic integration working |
+| Desktop adapters | @itsalfredakku | 🟡 In Progress | Q2 2025 | Windows and macOS prototypes functional |
 | Mobile support | Unassigned | 🔴 Not Started | Q3 2025 | |
 
 #### Core APIs
@@ -61,8 +61,8 @@
 |------|----------|--------|--------|-------|
 | Animation system | Unassigned | 🔴 Not Started | Q3 2025 | |
 | Accessibility support | Unassigned | 🔴 Not Started | Q3 2025 | |
-| Event handling system | @alex | 🟡 In Progress | Q2 2025 | Basic DOM events implemented |
-| Styling system | @sarah | 🔴 Not Started | Q3 2025 | |
+| Event handling system | @itsalfredakku | 🟡 In Progress | Q2 2025 | Basic DOM events implemented |
+| Styling system | @itsalfredakku | 🔴 Not Started | Q3 2025 | |
 
 ### orbiton (CLI Tooling)
 
@@ -70,16 +70,16 @@
 
 | Task | Assignee | Status | Target | Notes |
 |------|----------|--------|--------|-------|
-| `orbiton new` command | @jamie | 🟢 Complete | Q1 2025 | Basic project scaffolding working |
-| Project templates | @jamie | 🟡 In Progress | Q2 2025 | Basic template implemented, need more variants |
+| `orbiton new` command | @itsalfredakku | 🟢 Complete | Q1 2025 | Basic project scaffolding working |
+| Project templates | @itsalfredakku | 🟡 In Progress | Q2 2025 | Basic template implemented, need more variants |
 | Configuration file system | Unassigned | 🔴 Not Started | Q2 2025 | |
 
 #### Development Workflow
 
 | Task | Assignee | Status | Target | Notes |
 |------|----------|--------|--------|-------|
-| Basic `orbiton dev` command | @jamie | 🟢 Complete | Q1 2025 | Simple dev server implemented |
-| File watching and live reloading | @jamie | 🟡 In Progress | Q2 2025 | Basic file watching implemented |
+| Basic `orbiton dev` command | @itsalfredakku | 🟢 Complete | Q1 2025 | Simple dev server implemented |
+| File watching and live reloading | @itsalfredakku | 🟡 In Progress | Q2 2025 | Basic file watching implemented |
 | Error reporting | Unassigned | 🔴 Not Started | Q2 2025 | |
 
 #### Build System
@@ -111,15 +111,15 @@
 ## 🚧 Blockers and Challenges
 
 1. **Parser Performance**: Current implementation is too slow for large component trees
-   - Action: @sarah investigating alternative parsing strategies
+   - Action: @itsalfredakku investigating alternative parsing strategies
    - Target resolution: End of Q2 2025
 
 2. **Skia Integration**: Challenges with text layout in non-Latin scripts
-   - Action: @miguel researching font handling improvements
+   - Action: @itsalfredakku researching font handling improvements
    - Target resolution: Mid Q2 2025
 
 3. **WebAssembly Size**: Current WASM bundle is too large
-   - Action: @chen working on tree-shaking unused features
+   - Action: @itsalfredakku working on tree-shaking unused features
    - Target resolution: End of Q2 2025
 
 ## 🗓️ Upcoming Milestones
