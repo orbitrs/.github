@@ -1,0 +1,30 @@
+# Default owners for everything in the repo
+* @orbitrs/core-team
+
+# Core framework code
+/orbit/ @orbitrs/framework-team
+/orbit/src/ @orbitrs/framework-team
+
+# Analyzer code
+/orbit-analyzer/ @orbitrs/tooling-team
+/orbit-analyzer/src/ @orbitrs/tooling-team
+
+# Component library code
+/orbitkit/ @orbitrs/components-team
+/orbitkit/src/ @orbitrs/components-team
+
+# CLI tool code
+/orbiton/ @orbitrs/tooling-team
+/orbiton/src/ @orbitrs/tooling-team
+
+# Documentation
+/docs/ @orbitrs/docs-team
+*.md @orbitrs/docs-team
+
+# Build and workflow configurations
+/.github/ @orbitrs/devops-team
+**/Cargo.toml @orbitrs/core-team
+**/Cargo.lock @orbitrs/core-team
+
+# Examples
+/examples/ @orbitrs/docs-team @orbitrs/framework-team

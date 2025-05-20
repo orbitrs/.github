@@ -1,0 +1,81 @@
+version: 2
+updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "ci"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+
+  # Maintain dependencies for Cargo
+  - package-ecosystem: "cargo"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "rust"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    ignore:
+      # These are updated manually to maintain compatibility
+      - dependency-name: "serde"
+      - dependency-name: "serde_json"
+    
+  # Updates for orbit crate
+  - package-ecosystem: "cargo"
+    directory: "/orbit"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "rust"
+      - "orbit-core"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+      
+  # Updates for orbit-analyzer crate
+  - package-ecosystem: "cargo"
+    directory: "/orbit-analyzer"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "rust"
+      - "orbit-analyzer"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+      
+  # Updates for orbitkit crate
+  - package-ecosystem: "cargo"
+    directory: "/orbitkit"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "rust"
+      - "orbitkit"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+      
+  # Updates for orbiton crate
+  - package-ecosystem: "cargo"
+    directory: "/orbiton"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "rust"
+      - "orbiton"
+    commit-message:
+      prefix: "chore"
+      include: "scope"

@@ -1,0 +1,54 @@
+name: Cache Management
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**/Cargo.toml'
+      - '**/Cargo.lock'
+      - 'rust-toolchain.toml'
+      - '.github/workflows/cache.yml'
+  schedule:
+    - cron: '0 0 * * 0'  # Run weekly to refresh caches
+  workflow_dispatch:
+
+jobs:
+  update-cache:
+    name: Update dependency cache
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        override: true
+        components: rustfmt, clippy
+    
+    - name: Cache Cargo registry and git
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cargo/registry
+          ~/.cargo/git
+          target
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+    
+    - name: Update cache (Unix)
+      if: runner.os != 'Windows'
+      run: |
+        cargo fetch
+        cargo build --workspace
+        cargo test --workspace --no-run
+    
+    - name: Update cache (Windows)
+      if: runner.os == 'Windows'
+      run: |
+        cargo fetch
+        cargo build --workspace
+        cargo test --workspace --no-run
