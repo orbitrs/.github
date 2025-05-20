@@ -18,8 +18,8 @@ readme = "README.md"
 [workspace.dependencies]
 # Common dependencies to ensure version consistency
 log = "0.4"
-thiserror = "1.0.47"  # Using a version known to be stable
-serde = { version = "1.0.188", features = ["derive"] }  # Compatible serde version
-serde_json = "1.0.107"  # Compatible serde_json version
+thiserror = "2.0.12"  # Updated to new major version to fix proc-macro issues
+serde = { version = "=1.0.190", features = ["derive"] }  # Updated to match serde_yaml requirements
+serde_json = "=1.0.107"  # Pinning exact serde_json version
 tokio = { version = "1", features = ["full"] }
 wasm-bindgen = "0.2"
