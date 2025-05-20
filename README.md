@@ -16,7 +16,7 @@
   </a>
 </p>
 
-Orbit is a Rust-first, cross-platform UI framework for building Web, Native, and Embedded applications using a unified component format.
+Orbit is a next-generation Rust-first, cross-platform UI framework for building Web, Native, and Embedded applications using a unified component format.
 
 ## Features
 
