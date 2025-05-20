@@ -43,7 +43,6 @@ flamegraph.svg
 /.git/
 /.gitattributes
 /.gitconfig
-/.github/
 
 # Git merge conflict resolution files
 *.orig
