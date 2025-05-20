@@ -4,6 +4,18 @@
   <img src="assets/orbitrs.svg" alt="Orbit UI Framework" width="200">
 </p>
 
+<p align="center">
+  <a href="https://github.com/orbitrs/orbit/actions/workflows/ci.yml">
+    <img src="https://github.com/orbitrs/orbit/actions/workflows/ci.yml/badge.svg" alt="CI Status">
+  </a>
+  <a href="https://crates.io/crates/orbiton">
+    <img src="https://img.shields.io/crates/v/orbiton.svg" alt="Crate">
+  </a>
+  <a href="https://github.com/orbitrs/orbit/blob/main/LICENSE-MIT">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+  </a>
+</p>
+
 Orbit is a Rust-first, cross-platform UI framework for building Web, Native, and Embedded applications using a unified component format.
 
 ## Features
