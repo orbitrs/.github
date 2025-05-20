@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "orbit"
+		},
+		{
+			"path": "orbit-analyzer"
+		},
+		{
+			"path": "orbitkit"
+		},
+		{
+			"path": "orbiton"
+		}
+	],
+	"settings": {}
+}
