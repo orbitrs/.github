@@ -1,6 +1,18 @@
 # Orbit UI Framework Ecosystem
 
-This repository contains the Orbit UI framework ecosystem - a Rust-first, cross-platform UI framework for building Web, Native, and Embedded applications.
+<p align="center">
+  <img src="assets/orbitrs.svg" alt="Orbit UI Framework" width="200">
+</p>
+
+Orbit is a Rust-first, cross-platform UI framework for building Web, Native, and Embedded applications using a unified component format.
+
+## Features
+
+- **Unified Component Format** - Write components once, run everywhere using `.orbit` files
+- **Performance-Focused** - Built in Rust for optimal performance and memory safety
+- **Cross-Platform** - Targets web, desktop, mobile, and embedded platforms
+- **Reactive State Management** - Efficient state updates and rendering optimizations
+- **Modern Developer Experience** - Hot reloading, developer tools, and static analysis
 
 ## Project Structure
 
@@ -25,6 +37,63 @@ cd my-app
 orbiton dev
 ```
 
+## Component Example
+
+Orbit uses a single file component format with template, style, and script sections:
+
+```
+<template>
+  <div class="counter">
+    <h2>{{ title }}</h2>
+    <div class="counter-display">{{ count }}</div>
+    <div class="counter-controls">
+      <button @click="increment">+</button>
+      <button @click="decrement">-</button>
+      <button @click="reset">Reset</button>
+    </div>
+  </div>
+</template>
+
+<style>
+.counter {
+  font-family: Arial, sans-serif;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+/* ...more styles... */
+</style>
+
+<script>
+use orbit::prelude::*;
+
+pub struct Counter {
+    title: String,
+    count: i32,
+    initial: i32,
+}
+
+impl Component for Counter {
+    type Props = CounterProps;
+    
+    fn new(props: Self::Props) -> Self {
+        let initial = props.initial.unwrap_or(0);
+        Self {
+            title: props.title,
+            count: initial,
+            initial,
+        }
+    }
+    
+    // render() is auto-generated from the template
+}
+
+// ...component methods...
+</script>
+```
+
 ## Development Setup
 
 1. Clone this repository:
@@ -45,10 +114,40 @@ orbiton dev
 
 ## Documentation
 
-- Main documentation is available in each project's README.md
-- Architecture and design specifications can be found in the [docs](./docs) directory
-- For component syntax and semantics, refer to [orbit-spec.md](./orbit/orbit-spec.md)
-- Development roadmap and milestones are available in the [roadmap](./docs/roadmap) directory
+- [Architecture Overview](./docs/architecture.md) - Framework architecture and design
+- [Component Specification](./orbit/orbit-spec.md) - `.orbit` file format and component API
+- [Getting Started Guide](./docs/getting-started/README.md) - Tutorials for new users
+- [API Docs](./docs/api/README.md) - API reference and guides
+- [Examples](./examples) - Example applications and components
+- [Roadmap](./docs/roadmap/README.md) - Development roadmap and milestones
+
+## Rendering Backends
+
+Orbit supports multiple rendering backends:
+
+- **Skia** - High-performance 2D graphics (default)
+- **WGPU** - Hardware-accelerated graphics via WebGPU API
+- **Web** - DOM-based rendering for web applications
+- **Custom** - Extensible renderer API for custom backends
+
+## Platform Support
+
+Current:
+- Desktop (Windows, macOS, Linux)
+- Web (via WebAssembly)
+
+Planned:
+- Mobile (iOS, Android)
+- Embedded
+
+## License
+
+This project is licensed under either:
+
+- [MIT License](LICENSE-MIT)
+- [Apache License, Version 2.0](LICENSE-APACHE)
+
+at your option.
 - View our development roadmap and milestones in the [roadmap](./docs/roadmap) directory
 
 ## Contributing
