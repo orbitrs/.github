@@ -160,7 +160,6 @@ This project is licensed under either:
 - [Apache License, Version 2.0](LICENSE-APACHE)
 
 at your option.
-- View our development roadmap and milestones in the [roadmap](./docs/roadmap) directory
 
 ## Contributing
 

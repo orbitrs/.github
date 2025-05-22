@@ -1,5 +1,9 @@
 # 🚀 Welcome to Orbit
 
+<p align="center">
+  <img src="assets/orbitrs.svg" alt="Orbit UI Framework" width="200">
+</p>
+
 **Orbit** — a next-generation, Rust-first UI framework that unifies web, native, and embedded application development through a single component model.
 
 > **Build once, deploy everywhere** with the performance, safety, and elegance of Rust.
