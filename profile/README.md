@@ -27,8 +27,8 @@ Orbit brings several unique innovations to Rust UI development:
 |---------|-------------|--------|
 | [**orbit**](https://github.com/orbitrs/orbit) | Core framework with component model and rendering engines | ⚙️ In Development |
 | [**orbiton**](https://github.com/orbitrs/orbiton) | CLI tooling for development, building, and deployment | ⚙️ In Development |
-| [**orbitkit**](https://github.com/orbitrs/orbitkit) | Ready-to-use component library and design system | 🔜 Coming Soon |
-| [**orbit-analyzer**](https://github.com/orbitrs/orbit-analyzer) | Static analysis, linting and validation for `.orbit` files | 🔜 Coming Soon |
+| **Orbit Component Library** | Ready-to-use component library and design system | ✅ Integrated |
+| [**orlint**](https://github.com/orbitrs/orlint) | Static analysis, linting and validation for `.orbit` files | 🔜 Coming Soon |
 
 ---
 
