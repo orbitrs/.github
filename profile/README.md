@@ -1,86 +1,33 @@
-# 🚀 Welcome to Orbit
+# Welcome to Orbitrs
 
 <p align="center">
-  <img src="assets/orbitrs.svg" alt="Orbit UI Framework" width="200">
+  <img src="../assets/orbitrs.svg" alt="Orbitrs Logo" width="200">
 </p>
 
-**Orbit** — a next-generation, Rust-first UI framework that unifies web, native, and embedded application development through a single component model.
+Orbitrs is an ecosystem of Rust-first UI and tooling projects for web, desktop, native, and embedded applications.
 
-> **Build once, deploy everywhere** with the performance, safety, and elegance of Rust.
+## Our Projects
 
----
+| Project | Description | Link |
+|---|---|---|
+| **orbit** | Core UI framework with Skia & WGPU rendering | https://github.com/orbitrs/orbit |
+| **orbiton** | CLI tooling for development, build, & deployment | https://github.com/orbitrs/orbiton |
+| **orlint** | Static analysis, linting & validation for `.orbit` files | https://github.com/orbitrs/orlint |
+| **sdk** | SDK, public assets & integrations | https://github.com/orbitrs/sdk |
+| **docs** | Comprehensive guides, API references & tutorials | https://github.com/orbitrs/sdk/docs |
 
-## 🔭 What Makes Orbit Different
+## Get Started
 
-Orbit brings several unique innovations to Rust UI development:
+1. Explore the core framework: https://github.com/orbitrs/orbit
+2. Install CLI tools: `cargo install orbiton`
+3. View live demos & examples: https://orbitrs.github.io
 
-- **`.orbit` Component Format**: Combine declarative markup, styling, and Rust logic in a unified file format
-- **Hybrid Rendering Architecture**: Leverage both Skia (for optimized 2D UI) and WGPU (for advanced 3D capabilities)
-- **Cross-Platform by Design**: Target browsers (WASM), desktop apps, and embedded systems from the same codebase
-- **Developer-First Experience**: Enjoy hot reloading, powerful CLI tools, and comprehensive static analysis
+## Contributing
 
----
-
-## 🧩 The Orbit Ecosystem
-
-| Project | Description | Status |
-|---------|-------------|--------|
-| [**orbit**](https://github.com/orbitrs/orbit) | Core framework with component model and rendering engines | ⚙️ In Development |
-| [**orbiton**](https://github.com/orbitrs/orbiton) | CLI tooling for development, building, and deployment | ⚙️ In Development |
-| **Orbit Component Library** | Ready-to-use component library and design system | ✅ Integrated |
-| [**orlint**](https://github.com/orbitrs/orlint) | Static analysis, linting and validation for `.orbit` files | 🔜 Coming Soon |
-
----
-
-## 🚦 Getting Started
-
-```bash
-# Install the CLI tool
-cargo install orbiton
-
-# Create your first Orbit project
-orbiton new my-awesome-app
-
-# Start the development server with hot reloading
-cd my-awesome-app
-orbiton dev
-```
-
----
-
-## 📚 Resources
-
-- **[Documentation](https://github.com/orbitrs/orbit/docs)**: Comprehensive guides, API references, and tutorials
-- **[Examples](https://github.com/orbitrs/orbit/examples)**: Sample applications showcasing Orbit capabilities
-- **[Discussions](https://github.com/orbitrs/orbit/discussions)**: Community conversations and support
-- **[Roadmap](https://github.com/orbitrs/orbit/docs/roadmap)**: Detailed development plan and milestone tracking
-
----
-
-## 🤝 Join the Community
-
-We're building the future of Rust UI development together:
-
-- **[GitHub Discussions](https://github.com/orbitrs/orbit/discussions)**: Best place for questions and ideas
-- **[Discord Server](#)**: Real-time chat with core team and community (coming soon)
-- **[Twitter: @orbitrs](https://twitter.com/orbitrs)**: Stay updated with announcements (coming soon)
-
----
-
-## 👥 Contributing
-
-Your contributions make Orbit better! We welcome:
-
-- **Code**: Pull requests for features, bug fixes, or optimizations
-- **Components**: Share your `.orbit` components with the community
-- **Documentation**: Improve guides, examples, and API docs
-- **Feedback**: Report bugs or suggest improvements
-
-See [CONTRIBUTING.md](https://github.com/orbitrs/orbit/CONTRIBUTING.md) for detailed guidelines.
-
----
+We welcome contributions of code, components, documentation, and feedback!
+- Report issues or request features: [GitHub Issues](https://github.com/orbitrs/orbit/issues)
+- Submit pull requests to any of our repositories
 
 <p align="center">
-  <em>Crafted with ❤️ by the Orbit Framework Team</em><br>
-  <strong>Let's build the future of Rust UI together!</strong> 🛰️
+  <em>Crafted with ❤️ by the Orbitrs Team</em>
 </p>
